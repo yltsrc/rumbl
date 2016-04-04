@@ -1,21 +1,18 @@
-defmodule Rumbl.Video do
+defmodule Rumbl.Category do
   use Rumbl.Web, :model
 
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   @timestamps_opts [type: Ecto.DateTime, usec: true]
 
-  schema "videos" do
-    field :url, :string
-    field :title, :string
-    field :description, :string
-    belongs_to :user, Rumbl.User
-    belongs_to :category, Rumbl.Category
+  schema "categories" do
+    field :name, :string
+
     timestamps
   end
 
-  @required_fields ~w(url title)
-  @optional_fields ~w(description category_id)
+  @required_fields ~w(name)
+  @optional_fields ~w()
 
   @doc """
   Creates a changeset based on the `model` and `params`.
@@ -26,5 +23,13 @@ defmodule Rumbl.Video do
   def changeset(model, params \\ :empty) do
     model
     |> cast(params, @required_fields, @optional_fields)
+  end
+
+  def alphabetical(query) do
+    from c in query, order_by: c.name
+  end
+
+  def names_and_ids(query) do
+    from c in query, select: {c.name, c.id}
   end
 end
