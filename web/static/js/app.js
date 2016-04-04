@@ -19,3 +19,16 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
+
+import { Greet, Bye } from "web/static/js/greeter";
+
+export var App = {
+  run: function(){
+    Greet.greet()
+  },
+  stop: function(){
+    Bye.greet()
+  }
+}
+
+App.run()
