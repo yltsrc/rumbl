@@ -26,6 +26,7 @@ defmodule Rumbl.User do
     |> changeset(params)
     |> cast(params, ~w(password), [])
     |> validate_length(:password, min: 6)
+    |> unique_constraint(:username)
     |> put_password_hash_with_salt()
   end
 

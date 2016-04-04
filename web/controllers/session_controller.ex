@@ -4,7 +4,7 @@ defmodule Rumbl.SessionController do
   alias Rumbl.User
 
   def new(conn, _params) do
-    render conn, "new.html"
+    render(conn, "new.html")
   end
 
   def create(conn, params = %{"session" => session_params}) do
