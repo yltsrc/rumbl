@@ -21,6 +21,7 @@ defmodule Rumbl.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/watch/:id", WatchController, :show
     resources "/users", UserController, only: [:index, :show]
     get "/sign_up", UserController, :new
     post "/sign_up", UserController, :create

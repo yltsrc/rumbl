@@ -32,3 +32,13 @@ export var App = {
 }
 
 App.run()
+
+
+import Player from "./player"
+
+let video = document.getElementById("video")
+if (video) {
+  Player.init(video.id, video.getAttribute("data-player-id"), () => {
+    console.log("Player ready!")
+  })
+}
