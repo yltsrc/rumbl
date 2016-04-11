@@ -1,4 +1,7 @@
 defmodule Rumbl.Router do
+  @moduledoc """
+  """
+
   use Rumbl.Web, :router
 
   pipeline :browser do

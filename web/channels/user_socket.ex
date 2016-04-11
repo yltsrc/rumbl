@@ -1,4 +1,7 @@
 defmodule Rumbl.UserSocket do
+  @moduledoc """
+  """
+
   use Phoenix.Socket
 
   ## Channels

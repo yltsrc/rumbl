@@ -1,4 +1,7 @@
 defmodule Rumbl.SessionController do
+  @moduledoc """
+  """
+
   use Rumbl.Web, :controller
 
   alias Rumbl.User

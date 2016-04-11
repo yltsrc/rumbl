@@ -1,4 +1,7 @@
 defmodule Rumbl.ErrorView do
+  @moduledoc """
+  """
+
   use Rumbl.Web, :view
 
   def render("404.html", _assigns) do

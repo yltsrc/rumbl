@@ -1,4 +1,7 @@
 defmodule Rumbl.Endpoint do
+  @moduledoc """
+  """
+
   use Phoenix.Endpoint, otp_app: :rumbl
 
   socket "/socket", Rumbl.UserSocket

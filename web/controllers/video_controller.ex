@@ -1,4 +1,7 @@
 defmodule Rumbl.VideoController do
+  @moduledoc """
+  """
+
   use Rumbl.Web, :controller
 
   alias Rumbl.Video

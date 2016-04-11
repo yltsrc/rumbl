@@ -1,4 +1,7 @@
 defmodule Rumbl.Category do
+  @moduledoc """
+  """
+
   use Rumbl.Web, :model
 
   @primary_key {:id, :binary_id, autogenerate: true}
