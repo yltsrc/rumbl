@@ -20,25 +20,20 @@ import "phoenix_html"
 
 // import socket from "./socket"
 
-import { Greet, Bye } from "web/static/js/greeter";
+// import Player from "./player";
+//
+// let video = document.getElementById("video")
+// if (video) {
+//   Player.init(video.id, video.getAttribute("data-player-id"), () => {
+//     console.log("Player ready!")
+//   })
+// }
 
-export var App = {
-  run: function(){
-    Greet.greet()
-  },
-  stop: function(){
-    Bye.greet()
-  }
-}
+import { CPlayer } from "web/static/js/cplayer";
 
-App.run()
-
-
-import Player from "./player"
-
-let video = document.getElementById("video")
+let video = document.getElementById("video");
 if (video) {
-  Player.init(video.id, video.getAttribute("data-player-id"), () => {
+  CPlayer.init(video.id, video.getAttribute("data-player-id"), () => {
     console.log("Player ready!")
   })
 }
