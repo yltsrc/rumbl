@@ -37,7 +37,8 @@ defmodule Rumbl.Video do
   end
 
   defp slugify_title(changes) do
-    if title = get_change(changes, :title) do
+    title = get_change(changes, :title)
+    if title do
       put_change(changes, :slug, slugify(title))
     else
       changes

@@ -17,7 +17,6 @@ let Video = {
     let msgInput = document.getElementById("msg-input");
     let postButton = document.getElementById("msg-submit");
     let vidChannel = socket.channel("videos:" + videoId);
-    window.vidChannel = vidChannel
 
     msgContainer.addEventListener("click", (event) => {
       event.preventDefault();
