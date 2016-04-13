@@ -29,11 +29,16 @@ import "phoenix_html"
 //   })
 // }
 
-import { CPlayer } from "web/static/js/cplayer";
+// import { CPlayer } from "web/static/js/cplayer";
+//
+// let video = document.getElementById("video");
+// if (video) {
+//   CPlayer.init(video.id, video.getAttribute("data-player-id"), () => {
+//     console.log("Player ready!")
+//   })
+// }
 
-let video = document.getElementById("video");
-if (video) {
-  CPlayer.init(video.id, video.getAttribute("data-player-id"), () => {
-    console.log("Player ready!")
-  })
-}
+import socket from "./socket"
+import Video from "./video"
+
+Video.init(socket, document.getElementById("video"));
