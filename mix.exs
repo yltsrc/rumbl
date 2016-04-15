@@ -3,7 +3,7 @@ defmodule Rumbl.Mixfile do
 
   def project do
     [app: :rumbl,
-     version: "0.10.0",
+     version: "0.11.0",
      elixir: "~> 1.0",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
@@ -39,7 +39,8 @@ defmodule Rumbl.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.9"},
       {:cowboy, "~> 1.0"},
-      {:comeonin, "~> 2.0"}
+      {:comeonin, "~> 2.0"},
+      {:sweet_xml, "~> 0.5"},
     ]
   end
 
