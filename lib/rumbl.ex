@@ -15,7 +15,7 @@ defmodule Rumbl do
       # Start the Ecto repository
       supervisor(Rumbl.Repo, []),
 
-      supervisor(Rumbl.InfoSys.Supervisor, []),
+      supervisor(InfoSys.Supervisor, []),
       # Here you could define other workers and supervisors as children
       # worker(Rumbl.Counter, [5], restart: :permanent),
     ]
